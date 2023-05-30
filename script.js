@@ -1,4 +1,8 @@
 document.getElementById('darkModeSwitch').addEventListener('change', function(event) {
-    document.body.classList.toggle('dark-mode', event.target.checked);
+    if(event.target.checked) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
   });
   

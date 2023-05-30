@@ -9,8 +9,16 @@ body, html {
   }
   
   .dark-mode {
-    background-color: #1a73e8;
+    background-color: #000;
     color: #f2f2f2;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #333;
+  }
+  
+  .dark-mode .section {
+    background-color: #222;
   }
   
   .navbar {
@@ -48,7 +56,6 @@ body, html {
   .section-image {
     width: 300px; /* Fixed image width */
     height: 200px; /* Fixed image height */
-    object-fit: cover; /* This will make the image cover the area without distortion */
   }
   
   .download-button {
