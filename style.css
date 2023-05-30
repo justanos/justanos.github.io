@@ -28,6 +28,10 @@ body, html {
     padding: 1rem 2rem;
     background-color: #1a73e8;
     color: #f2f2f2;
+    position: fixed;
+    width: 100%;
+    font-size: 1.2em; /* Make the text pop out more */
+    z-index: 1; /* Make sure the navbar stays on top */
   }
   
   .navbar a, .navbar .logo {
@@ -49,9 +53,19 @@ body, html {
     align-items: center;
     height: 100vh; /* Force section to take up full viewport height */
     padding: 20px;
-    background-color: white;
-    background-image: url('fancy-background.jpg'); /* Replace with your fancy background */
-    background-size: cover;
+    padding-top: 100px; /* Adjust for the fixed navbar */
+  }
+  
+  #home {
+    background-color: #f0f0f0;
+  }
+  
+  #download {
+    background-color: #e0e0e0;
+  }
+  
+  #about {
+    background-color: #d0d0d0;
   }
   
   .section .content {
