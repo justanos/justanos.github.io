@@ -8,15 +8,15 @@
   /* Global Styles */
   body {
     font-family: Arial, sans-serif;
-    background-color: #f0f6ff;
-    color: #333;
+    background-color: #0d1117;
+    color: #c9d1d9;
     line-height: 1.5;
   }
   
   /* Header Styles */
   header {
-    background-color: #192a56;
-    color: #fff;
+    background-color: #0d1117;
+    color: #c9d1d9;
     padding: 20px;
     text-align: center;
   }
@@ -31,7 +31,7 @@
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #161b22;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
@@ -43,7 +43,7 @@
   }
   
   h2 {
-    color: #192a56;
+    color: #58a6ff;
     font-size: 24px;
     margin-bottom: 10px;
   }
@@ -51,6 +51,7 @@
   ul {
     list-style: disc;
     margin-left: 20px;
+    color: #c9d1d9;
   }
   
   /* Image Gallery Styles */
@@ -62,19 +63,31 @@
     display: flex;
   }
   
-  .image-container img {
-    width: 200px;
-    height: 150px;
+  .image-box {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    width: 300px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    margin-right: 10px;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  
+  .image-box p {
+    margin-bottom: 0;
   }
   
   /* Footer Styles */
   footer {
-    background-color: #192a56;
-    color: #fff;
+    background-color: #0d1117;
+    color: #c9d1d9;
     padding: 20px;
     text-align: center;
   }
