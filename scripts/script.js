@@ -1,7 +1,9 @@
 window.onload = function() {
   var checkbox = document.getElementById('darkModeSwitch');
+  var navItems = document.getElementById('nav-items');
+  var navToggle = document.getElementById('nav-toggle');
 
-  // Retrieve saved mode from localStorage
+  // Dark Mode Toggle
   var savedMode = localStorage.getItem('darkMode');
   if (savedMode === 'true') {
     document.body.classList.add('dark-mode');
@@ -19,5 +21,10 @@ window.onload = function() {
       document.body.classList.remove('dark-mode');
       localStorage.setItem('darkMode', 'false');
     }
+  });
+
+  // Hamburger Menu Toggle
+  navToggle.addEventListener('click', function() {
+    navItems.classList.toggle('nav-active');
   });
 };

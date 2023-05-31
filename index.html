@@ -2,20 +2,25 @@
 <html>
 <head>
   <title>mOS - The Student-Crafted Ubuntu Distro</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="navbar">
     <img src="assets/mos.svg" alt="mOS logo" id="logo" class="logo">
-    <div class="nav-items">
+    <div id="nav-toggle" class="nav-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-items" id="nav-items">
       <a href="#home"><img src="home-icon.png" alt="Home icon" class="nav-icon">Home</a>
       <a href="#download"><img src="download-icon.png" alt="Download icon" class="nav-icon">Download</a>
       <a href="#about"><img src="about-icon.png" alt="About icon" class="nav-icon">About Us</a>
+      <div class="switch">
+        <input type="checkbox" id="darkModeSwitch">
+        <span class="slider"></span>
+      </div>
     </div>
-    <label class="switch">
-      <input type="checkbox" id="darkModeSwitch">
-      <span class="slider round"></span>
-    </label>
   </div>
   <div class="section" id="home" style="background-image: url('home-bg.png')">
     <div class="content">
@@ -41,6 +46,6 @@
     </div>
     <img src="about-image.png" alt="mOS screenshot" class="section-image">
   </div>
-<script src="script/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
