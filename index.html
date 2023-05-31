@@ -1,44 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>mOS - The Student-Crafted Ubuntu Distro</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mOS - The Modern Ubuntu-based Distro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="navbar">
-    <img src="logo.png" alt="mOS logo" id="logo" class="logo">
-    <div class="nav-items">
-      <a href="#home"><img src="home-icon.png" alt="Home icon" class="nav-icon">Home</a>
-      <a href="#download"><img src="download-icon.png" alt="Download icon" class="nav-icon">Download</a>
-      <a href="#about"><img src="about-icon.png" alt="About icon" class="nav-icon">About Us</a>
-    </div>
-    <label class="switch">
-      <input type="checkbox" id="darkModeSwitch">
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <div class="section" id="home" style="background-image: url('home-bg.png')">
-    <div class="content">
-      <h1>Welcome to mOS</h1>
-      <p>This is a custom Ubuntu distro crafted by students</p>
-    </div>
-    <img src="home-image.png" alt="mOS screenshot" class="section-image">
-  </div>
-  <div class="section" id="download" style="background-image: url('download-bg.png')">
-    <div class="content">
-      <h1>Download mOS</h1>
-      <p>Join the community and start using mOS today</p>
-      <button class="download-button">Download</button>
-    </div>
-    <img src="download-image.png" alt="mOS screenshot" class="section-image">
-  </div>
-  <div class="section" id="about" style="background-image: url('about-bg.png')">
-    <div class="content">
-      <h1>About Us</h1>
-      <p>We are two students passionate about open-source software</p>
-    </div>
-    <img src="about-image.png" alt="mOS screenshot" class="section-image">
-  </div>
-<script src="scripts/script.js"></script>
+  <nav class="navbar">
+    <h1>mOS</h1>
+  </nav>
+
+  <header>
+    <h1>Welcome to mOS</h1>
+    <p>An Ubuntu-based Distro by 2 Students</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About mOS</h2>
+      <p>mOS is a modern and lightweight Linux distribution built on top of Ubuntu. It is developed by two passionate
+        students who aim to provide an intuitive and user-friendly operating system.</p>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Fast and responsive performance</li>
+        <li>Minimalistic and modern user interface</li>
+        <li>Optimized for productivity and ease of use</li>
+        <li>Built-in support for popular development tools</li>
+        <li>Secure and reliable</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>System Requirements</h2>
+      <ul>
+        <li>Processor: 2 GHz dual-core</li>
+        <li>Memory: 2 GB RAM</li>
+        <li>Storage: 20 GB available space</li>
+        <li>Graphics: 1024x768 resolution</li>
+      </ul>
+    </section>
+
+    <section class="image-gallery">
+      <h2>Gallery</h2>
+      <div class="image-container">
+        <div class="image-box">
+          <img src="image1.jpg" alt="Image 1">
+          <p>Image 1 Description</p>
+        </div>
+        <div class="image-box">
+          <img src="image2.jpg" alt="Image 2">
+          <p>Image 2 Description</p>
+        </div>
+        <div class="image-box">
+          <img src="image3.jpg" alt="Image 3">
+          <p>Image 3 Description</p>
+        </div>
+        <div class="image-box">
+          <img src="image4.jpg" alt="Image 4">
+          <p>Image 4 Description</p>
+        </div>
+        <div class="image-box">
+          <img src="image5.jpg" alt="Image 5">
+          <p>Image 5 Description</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 mOS - All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
