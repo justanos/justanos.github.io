@@ -1,0 +1,750 @@
+1) Groene pijl
+CSS: @keyframes button-shadow{
+  from{
+    transform: rotate(0);
+    bottom: -5px;
+    right: -5px;
+    opacity: 1;
+  }to{
+    transform: rotate(40deg);
+    bottom: 50px;
+    right: -60px;
+    opacity: 0;
+  }
+}
+
+@keyframes button-arrow-rotate{
+  0%{
+      width: 15px;
+      margin: -25px auto 0;
+  }1%{
+      width: 10px;
+      height: 0px;
+      margin-top: 15px;
+      transform: rotate(45deg);
+  }100%{
+      width: 10px;
+      margin-top: 15px;
+      transform: rotate(45deg);
+      height: 35px;
+  }
+}
+
+@keyframes button-arrow-down{
+  from{
+      bottom: -25px;
+      opacity: 1;
+  }to{
+      bottom: -40px;
+      opacity: 0;
+  }
+}
+
+@keyframes button-arrow-up{
+  0%{
+      height: 20px;
+      transform: rotateZ(45deg);
+      right: -7px;
+  }1%{
+      right: 0px;
+      height: 10px;
+      width: 0;
+      transform: rotateZ(0);
+  }100%{
+      right: 0px;
+      height: 10px;
+      width: 20px;
+      transform: rotateZ(0);
+  }
+}
+
+body{
+  width: 90%;
+  display: flex;
+  background: #28df99;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+button{
+  background-color: #fff;
+  width: 140px;
+  height: 70px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .5s;
+  
+  .arrow{
+    height: 25px;
+    width: 15px;
+    background-color: #99f3bd;
+    border-radius: 2px;
+    margin: -25px auto 0;
+    position: relative;
+    &:after{
+      content:'';
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      background-color: #99f3bd;
+      border-radius: 2px;
+      transform: rotateZ(45deg) translate(1px,7px);
+      bottom: 0;
+      right: -7px;
+      transition: all .5s;
+      transition-delay: .5s;
+    }
+    &:before{
+      content: '';
+      background-color: #99f3bd;
+      width: 25px;
+      height: 10px;
+      position: absolute;
+      left: -5px;
+      bottom: -25px;
+      border-radius: 2px;
+      transition: all .5s;
+    }
+  }
+  
+  &:after,&:before{
+    content:'';
+    position: absolute;
+    z-index: -1;
+    background-color: #99f3bd;
+    height: 100%;
+    width: 100%;
+    bottom: -5px;
+    right: -5px;
+    border-radius: 5px;
+  }
+  
+  &:after{
+      animation-play-state: pause; 
+  }
+  
+  &:active{
+    width: 180px;
+    height: 90px;
+  }
+  
+  &:focus{
+    &:after{   
+      animation: button-shadow 1s;
+    }
+    
+    .arrow{
+      animation: button-arrow-rotate .5s forwards;
+      animation-delay: .5s;
+      &:after{
+        animation: button-arrow-up .5s forwards;
+        animation-delay: .5s;
+      }
+      &:before{
+        animation: button-arrow-down .5s forwards;
+
+      }
+    }
+  }
+}
+HTML: <button class="btn-download" id="btn-auto-click">
+   <div class="arrow"></div>
+</button>
+__________________________________________________________________________________________________________________________________
+2) Loading groen
+HTML: .container|
+    |
+    a.fas.fa-arrow-alt-circle-down.btn(href= '#succes')
+        span.txt &#68;ownload
+    #succes|
+        |
+        a.fas.fa-times-circle(href= '#')
+        .fas.fa-check.status
+            span.txt Done
+        .loader
+|
+|
+a.me(href='https://codepen.io/uzcho_/pens/popular/?grid_type=list' target='_blank')
+CSS: *{
+    font: 400 16px 'Signika'
+}
+
+body{
+    @include _flexbox($n, $rw, $n, $c)
+}
+
+.container{
+    padding: 64px;
+    position: $rl
+}
+
+.btn, .status{
+    padding: 8px 16px;
+    color: #fff;
+    border-radius: 4px
+}
+
+.btn{
+    background: #2f4ad0;
+    box-shadow: 0 8px 6px -6px #555;
+    transition: all .4s ease;
+    &:hover{
+        letter-spacing: 2px;
+        box-shadow: $no
+    }
+}
+
+.txt{
+    margin-left: 10px
+}
+
+#succes, .loader{
+    background: #fff;
+    @include _dimension(100%);
+    position: $ab;
+    z-index: 1
+}
+
+#succes{
+    @include _offset(50%, $n, $n, 50%);
+    @include _flexbox($n, $rw, $n, $c);
+    transform: translate(-50%, -50%) scale(0, 0);
+    a{
+        @include _offset(8px, 8px, $n, $n);
+        position: $ab;
+        color: #000
+    }
+}
+
+.status{
+    background: #2fb65a
+}
+
+.loader{
+    @include _offset(0, $n, $n, 0);
+    visibility: hidden;
+    @include _pseudo-uncomplete($bfaf, $bl){
+        left: 0
+    }
+    #{$bf}{
+        @include _dimension(100%);
+        top: 0;
+        @include _flexbox($n, $rnw, $c, $n, $c);
+        font-size: 20px
+    }
+    #{$af}{
+        @include _solid-box(#2fb65a, $n, $n, $n, 0, $n, 0, 3px)
+    }
+}
+
+#succes:target{
+    transform: translate(-50%, -50%) scale(1, 1);
+    .loader{
+        @include _animation(show, 10s linear, to){
+            visibility: visible
+        }
+        #{$bf}{
+            @include _animation(percent, 10s linear, x){
+                @for $i from 0 through 100{
+                    #{$i * 100 / 100}%{
+                        content: '#{$i}%'
+                    }
+                }
+            }
+        }
+        #{$af}{
+            @include _animation(load, 10s linear, x){
+                @for $i from 0 through 100{
+                    #{$i * 100 / 100}%{
+                        width: #{$i + '%'}
+                    }
+                }
+            }
+        }
+    }
+}
+___________________________________________________________________________________________________________________-
+3) Cloud download
+HTML: <button type="button" class="icon">
+	<div class="cloud">
+		<div class="puff puff-1"></div>
+		<div class="puff puff-2"></div>
+		<div class="puff puff-3"></div>
+		<div class="puff puff-4"></div>
+		<div class="puff puff-5"></div>
+		<div class="puff puff-6"></div>
+		<div class="puff puff-7"></div>
+		<div class="puff puff-8"></div>
+		<div class="puff puff-9"></div>
+		<div class="puff puff-10"></div>
+		<div class="cloud-core"></div>
+		<div class="check"></div>
+		<div class="arrow">
+			<div class="arrow-stem">
+				<div class="arrow-l-tip"></div>
+				<div class="arrow-r-tip"></div>
+			</div>
+		</div>
+	</div>
+	<div class="preload">
+		<div class="drop drop-1"></div>
+		<div class="drop drop-2"></div>
+		<div class="drop drop-3"></div>
+	</div>
+	<div class="progress"></div>
+</button>
+CSS:*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #ace;
+}
+.icon {
+	background-color: transparent;
+	border: 0;
+	color: #557eef;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	margin: 3em auto 0 auto;
+	position: relative;
+	width: 9em;
+	height: 9em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.icon:focus {
+	/* This may be anti-A11Y, but just for this demo suppresses the annoyance */
+	outline: 0;
+}
+.icon div {
+	position: absolute;
+}
+.cloud {
+	transition: opacity 0.1s linear;
+}
+/* Cloud */
+.cloud {
+	top: 0;
+	width: 9em;
+	height: 5.8em;
+}
+.puff, .cloud-core {
+	background-color: #fff;
+}
+.puff {
+	border-radius: 50%;
+}
+.puff-1 {
+	top: 2.5em;
+	left: 0;
+	width: 3.3em;
+	height: 3.3em;
+}
+.puff-2 {
+	top: 1em;
+	left: 1.2em;
+	width: 3em;
+	height: 3em;
+}
+.puff-3 {
+	top: 0;
+	left: 3em;
+	width: 4.6em;
+	height: 4.6em;
+}
+.puff-4 {
+	top: 1.8em;
+	left: 5em;
+	width: 4em;
+	height: 4em;
+}
+.puff-5 {
+	top: 2.3em;
+	left: 2.4em;
+	width: 3.5em;
+	height: 3.5em;
+}
+.puff-6 {
+	top: 2.3em;
+	left: 3em;
+	width: 3.5em;
+	height: 3.5em;
+}
+.puff-7 {
+	top: 2.4em;
+	left: 1em;
+	width: 1.8em;
+	height: 1.8em;
+}
+.puff-8 {
+	top: 1.2em;
+	left: 2.5em;
+	width: 2em;
+	height: 2em;
+}
+.puff-9 {
+	top: 1.8em;
+	left: 5.5em;
+	width: 2em;
+	height: 2em;
+}
+.puff-10 {
+	top: 3.6em;
+	left: 3.5em;
+	width: 2.2em;
+	height: 2.2em;
+}
+.cloud-core {
+	top: 1.8em;
+	left: 1.8em;
+	width: 5em;
+	height: 4em;
+}
+.check {
+	top: 0;
+	left: 1.6em;
+	width: 5.8em;
+	height: 5.8em;
+	position: relative;
+	transform: scale(0);
+	z-index: -1;
+}
+.check:before, .check:after {
+	background-color: currentColor;
+	content: "";
+	bottom: 0;
+	display: block;
+	left: 2.5em;
+	position: absolute;
+	width: 0.8em;
+}
+.check:before {
+	height: 3em;
+	transform: rotate(-55deg);
+	transform-origin: 50% 2.6em;
+}
+.check:after {
+	height: 5.5em;
+	transform: rotate(35deg);
+	transform-origin: 50% 5.1em;
+}
+/* Arrow */
+.arrow {
+	top: 3em;
+	left: 0;
+	width: 9em;
+	height: 5.3em;
+}
+.arrow div, .progress {
+	border-radius: 0.4em;
+}
+.arrow div {
+	background-color: currentColor;
+}
+.arrow-stem {
+	bottom: 0;
+	left: 4.1em;
+	width: 0.8em;
+	height: 5.3em;
+	transform-origin: 50% 100%;
+}
+.arrow-l-tip, .arrow-r-tip {
+	left: calc(50% - 0.4em);
+	bottom: 0;
+	width: 2.6em;
+	height: 0.8em;
+	transform-origin: 0.4em 50%;
+}
+.arrow-l-tip {
+	transform: rotate(-135deg);
+}
+.arrow-r-tip {
+	transform: rotate(-45deg);
+}
+.progress {
+	background-color: #fff;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0.8em;
+}
+
+/* Droplets */
+.preload, .drop {
+	transition: all 0.2s linear;
+}
+.preload {
+	animation: spin 1s linear infinite;
+	opacity: 0;
+	top: 2.9em;
+	left: calc(50% - 1.25em);
+	width: 2.5em;
+	height: 2.5em;
+	z-index: 1;
+}
+.drop {
+	background-color: currentColor;
+	background-image: radial-gradient(0.5em 0.5em at 30% 75%,rgb(255,255,255) 45%, rgba(255,255,255,0) 50%);
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+.drop-1 {
+	transform: scaleY(0.75) rotate(135deg);
+}
+.drop-2 {
+	transform: rotate(120deg) scaleY(0.75) rotate(135deg);
+}
+.drop-3 {
+	transform: rotate(240deg) scaleY(0.75) rotate(135deg);
+}
+
+/** Animation **/
+.waiting, .running {
+	cursor: default;
+}
+/* Waiting */
+.waiting .cloud {
+	opacity: 0.15;
+}
+.waiting .preload {
+	opacity: 1;
+}
+.waiting .drop {
+	border-radius: 0 50% 50% 50%;
+}
+.waiting .drop-1 {
+	transform: translateY(2.5em) scaleY(0.75) rotate(135deg);
+}
+.waiting .drop-2 {
+	transform: rotate(120deg) translateY(2.5em) scaleY(0.75) rotate(135deg);
+}
+.waiting .drop-3 {
+	transform: rotate(240deg) translateY(2.5em) scaleY(0.75) rotate(135deg);
+}
+
+/* Running */
+.running .puff {
+	animation-duration: 0.75s;
+	animation-delay: 2.75s;
+	animation-timing-function: cubic-bezier(.1,.8,.2,.95);
+}
+.running .puff-1 {
+	animation-name: puff1;
+}
+.running .puff-2 {
+	animation-name: puff2;
+}
+.running .puff-3 {
+	animation-name: puff3;
+}
+.running .puff-4 {
+	animation-name: puff4;
+}
+.running .puff-5 {
+	animation-name: puff5;
+}
+.running .puff-6 {
+	animation-name: puff6;
+}
+.running .puff-7 {
+	animation-name: puff7;
+}
+.running .puff-8 {
+	animation-name: puff8;
+}
+.running .puff-9 {
+	animation-name: puff9;
+}
+.running .puff-10 {
+	animation-name: puff10;
+}
+.running .cloud-core {
+	animation: core 2.75s;
+}
+.running .check {
+	animation: check 0.4s 2.75s;
+}
+.running .arrow {
+	animation: arrow 0.125s;
+}
+.running .arrow-stem {
+	animation: arrowStem 0.125s;
+}
+.running .arrow-l-tip {
+	animation: arrowLTip 0.375s 0.125s;
+}
+.running .arrow-r-tip {
+	animation: arrowRTip 0.375s 0.125s;
+}
+.running .progress {
+	animation: filling 2s 0.75s;
+}
+.icon.running div {
+	animation-fill-mode: forwards;
+}
+.icon.running .cloud-core, .icon.running .check, .icon.running .arrow, .icon.running .arrow div, .icon.running .progress {
+	animation-timing-function: linear;
+}
+
+/* Keyframes */
+@keyframes puff1 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(-4em,0) scale(0.1)}
+}
+@keyframes puff2 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(-2em,-2em) scale(0.1)}
+}
+@keyframes puff3 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(2em,-4em) scale(0.1)}
+}
+@keyframes puff4 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(4em,0) scale(0.1)}
+}
+@keyframes puff5 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(-3.5em,3.5em) scale(0.1)}
+}
+@keyframes puff6 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(3.5em,3.5em) scale(0.1)}
+}
+@keyframes puff7 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(-3em,-1.5em) scale(0.1)}
+}
+@keyframes puff8 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(-0.5em,-2em) scale(0.1)}
+}
+@keyframes puff9 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(2em,-2em) scale(0.1)}
+}
+@keyframes puff10 {
+	from {opacity: 1;transform: translate(0) scale(1)}
+	to {opacity: 0;transform: translate(0em,2.5em) scale(0.1)}
+}
+@keyframes core {
+	from {visibility: visible}
+	to {visibility: hidden}
+}
+@keyframes check {
+	from {transform: scale(0)}
+	30% {transform: scale(1.2)}
+	60% {transform: scale(0.9)}
+	to {transform: scale(1)}
+}
+@keyframes arrow {
+	from {transform: translateY(0)}
+	to {transform: translateY(0.7em)}
+}
+@keyframes arrowStem {
+	from {height: 5.3em}
+	to {height: 0.8em}
+}
+@keyframes arrowLTip {
+	from {transform: rotate(-135deg)}
+	50% {width: 2.6em;transform: rotate(-180deg)}
+	to {width: 4.9em;transform: rotate(-180deg)}
+}
+@keyframes arrowRTip {
+	from {transform: rotate(-45deg);}
+	50% {width: 2.6em;transform: rotate(0deg)}
+	to {width: 4.9em;transform: rotate(0deg)}
+}
+@keyframes filling {
+	from {width: 0;}
+	to {width: 100%;}
+}
+@keyframes spin {
+	from {transform: rotate(0deg)}
+	to {transform: rotate(1turn)}
+}
+_____________________________________________________________________________________________________________________________
+4) Normaal in blauw
+HTML:<div id="btn-download">
+  <svg width="22px" height="16px" viewBox="0 0 22 16">
+    <path d="M2,10 L6,13 L12.8760559,4.5959317 C14.1180021,3.0779974 16.2457925,2.62289624 18,3.5 L18,3.5 C19.8385982,4.4192991 21,6.29848669 21,8.35410197 L21,10 C21,12.7614237 18.7614237,15 16,15 L1,15" id="check"></path>
+    <polyline points="4.5 8.5 8 11 11.5 8.5" class="svg-out"></polyline>
+    <path d="M8,1 L8,11" class="svg-out"></path>
+</svg>
+</div>
+
+<!-- dribbble -->
+<a class="credit" href="https://dribbble.com/shots/4570587-Download-micro-interaction" target="_blank"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt=""></a>
+
+CSS:#btn-download
+  cursor: pointer
+  display: block
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  -webkit-tap-highlight-color: transparent
+  //transform: scale(2)
+  //centering
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  &:hover
+    background: rgba(#223254,.03)
+  svg
+    margin: 16px 0 0 16px
+    fill: none
+    transform: translate3d(0,0,0)
+    polyline,
+    path
+      stroke: #0077FF
+      stroke-width: 2
+      stroke-linecap: round
+      stroke-linejoin: round
+      transition: all .3s ease
+      transition-delay: .3s
+    path#check
+      stroke-dasharray: 38
+      stroke-dashoffset: 114
+      transition: all .4s ease
+  &.downloaded
+    svg
+      .svg-out
+        opacity: 0
+        animation: drop .3s linear
+        transition-delay: .4s
+      path#check
+        stroke: #20CCA5
+        stroke-dashoffset: 174
+        transition-delay: .4s
+        
+@keyframes drop
+  20%
+    transform: (translate(0, -3px))
+  80%
+    transform: (translate(0, 2px))
+  95%
+    transform: (translate(0, 0))
+  
+//dribbble 
+.credit
+  position: fixed
+  right: 20px
+  bottom: 20px
+  transition: all .2s ease
+  -webkit-user-select: none
+  user-select: none
+  opacity: .6
+  img
+    width: 72px
+  &:hover
+    transform: scale(.95)
+________________________________________________________________________________________________________________________
