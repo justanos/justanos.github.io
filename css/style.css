@@ -85,19 +85,6 @@ body, html {
   height: 200px;
 }
 
-.download-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #1a73e8;
-  color: #f2f2f2;
-  cursor: pointer;
-}
-
-.download-button:hover {
-  background-color: #0052cc;
-}
-
 .switch {
   position: relative;
   display: inline-block;
@@ -242,15 +229,6 @@ input:checked + .slider:before {
       transform: rotateZ(0);
   }
 }
-
-/*body{
-  width: 90%;
-  display: flex;
-  background: #28df99;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}*/
 
 button{
   background-color: #fff;
