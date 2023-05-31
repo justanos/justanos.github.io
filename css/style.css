@@ -7,22 +7,6 @@ body, html {
   color: black;
   scroll-behavior: smooth;
 }
-
-/* Custom Scrollbar Styles */
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: #f0f0f0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: lightgrey;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: grey;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,13 +18,12 @@ body, html {
   width: 100%;
   font-size: 1.2em;
   z-index: 1;
-  margin-left: 0;
 }
 
 .nav-items {
   display: flex;
   gap: 1rem;
-  transform: translateX(-20px);
+  transform: translateX(-200px);
 }
 
 .navbar a, .navbar .logo {
@@ -54,6 +37,12 @@ body, html {
 
 .navbar .logo {
   width: 100px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
 }
 
 .section {
