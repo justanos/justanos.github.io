@@ -4,6 +4,31 @@ document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.nav-items a');
 
+  function scrollToNextSection() {
+    let currentSection = null;
+    for (let i = 0; i < sections.length; i++) {
+      const rect = sections[i].getBoundingClientRect();
+      if (rect.top > 0 && rect.top < window.innerHeight) {
+        currentSection = sections[i];
+        break;
+      }
+    }
+
+    if (currentSection) {
+      const nextSection = currentSection.nextElementSibling;
+      if (nextSection && nextSection.classList.contains('section')) {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  window.addEventListener('wheel', function(event) {
+    if (event.deltaY > 0) {
+      // Scrolling down
+      scrollToNextSection();
+    }
+  });
+
   function isSectionInView(element) {
     const rect = element.getBoundingClientRect();
     return (
