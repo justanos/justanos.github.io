@@ -1,166 +1,180 @@
 body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: black;
-    scroll-behavior: smooth;
-  }
-  
-  .dark-mode {
-    background-color: #000;
-    color: #f2f2f2;
-  }
-  
-  .dark-mode .navbar {
-    background-color: #333;
-  }
-  
-  .dark-mode .section {
-    background-color: #222;
-  }
-  
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+.dark-mode {
+  background-color: #000;
+  color: #f2f2f2;
+}
+
+.dark-mode .navbar {
+  background-color: #333;
+}
+
+.dark-mode .section {
+  background-color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a73e8;
+  color: #f2f2f2;
+  position: fixed;
+  width: 100%;
+  font-size: 1.2em; /* Make the text pop out more */
+  z-index: 1; /* Make sure the navbar stays on top */
+}
+
+.navbar a, .navbar .logo {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+
+.navbar .logo {
+  width: 100px; /* Set fixed size for the logo */
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Force section to take up full viewport height */
+  padding: 20px;
+  padding-top: 100px; /* Adjust for the fixed navbar */
+}
+
+#home {
+  background-color: #f0f0f0;
+}
+
+#download {
+  background-color: #e0e0e0;
+}
+
+#about {
+  background-color: #d0d0d0;
+}
+
+.section .content {
+  width: 50%;
+}
+
+.section h1 {
+  font-size: 3em; /* Large letter type */
+}
+
+.section p {
+  font-size: 1.5em; /* Large letter type */
+}
+
+.section-image {
+  width: 300px; /* Fixed image width */
+  height: 200px; /* Fixed image height */
+}
+
+.download-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1a73e8;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #0052cc;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1a73e8;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #1a73e8;
-    color: #f2f2f2;
-    position: fixed;
-    width: 100%;
-    font-size: 1.2em; /* Make the text pop out more */
-    z-index: 1; /* Make sure the navbar stays on top */
+    flex-direction: column;
+    padding: 0.5rem 1rem;
   }
-  
-  .navbar a, .navbar .logo {
-    color: #f2f2f2;
-    text-decoration: none;
-  }
-  
-  .navbar a:hover {
-    color: #ddd;
-  }
-  
+
   .navbar .logo {
-    width: 100px; /* Set fixed size for the logo */
+    margin-bottom: 0.5rem;
   }
-  
+
   .section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh; /* Force section to take up full viewport height */
-    padding: 20px;
-    padding-top: 100px; /* Adjust for the fixed navbar */
+    flex-direction: column;
+    padding-top: 150px; /* Adjust for the bigger navbar on small screens */
   }
-  
-  #home {
-    background-color: #f0f0f0;
+
+  .section .content, .section-image {
+    width: 100%;
+    text-align: center;
   }
-  
-  #download {
-    background-color: #e0e0e0;
-  }
-  
-  #about {
-    background-color: #d0d0d0;
-  }
-  
-  .section .content {
-    width: 50%;
-  }
-  
-  .section h1 {
-    font-size: 3em; /* Large letter type */
-  }
-  
-  .section p {
-    font-size: 1.5em; /* Large letter type */
-  }
-  
+
   .section-image {
-    width: 300px; /* Fixed image width */
-    height: 200px; /* Fixed image height */
+    margin-top: 2rem;
   }
-  
-  .download-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #1a73e8;
-    color: #f2f2f2;
-    cursor: pointer;
-  }
-  
-  .download-button:hover {
-    background-color: #0052cc;
-  }
-  
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #1a73e8;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .navbar {
-      flex-direction: column;
-    }
-  
-    .section {
-      flex-direction: column;
-    }
-  }
-  
+}
