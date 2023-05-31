@@ -2,7 +2,7 @@ div{
     width:50px;
     height:50px;
     background:url("mos.png");
-    transition:2.5s; /* Transition duration */
+    transition:2.5s; 
 }
 div:hover{
     background:url("mosss.png");
@@ -10,5 +10,5 @@ div:hover{
     -ms-transform:rotate(720deg);
     -moz-transform:rotate(720deg);
     -webkit-transform:rotate(720deg);
-    transform:rotate(720deg); /* How many times it'll rotate = degrees÷360 */
+    transform:rotate(720deg); 
 }
