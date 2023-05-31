@@ -13,7 +13,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.95rem;
-  background-color: transparent; /* Update background-color to transparent */
+  background-color: transparent;
   color: #2e2e2e;
   position: fixed;
   width: 100%;
@@ -152,10 +152,10 @@ button {
   position: relative;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 
-.button .arrow {
+button .arrow {
   height: 25px;
   width: 15px;
   background-color: #99f3bd;
@@ -164,7 +164,7 @@ button {
   position: relative;
 }
 
-.button .arrow:after {
+button .arrow:after {
   content: '';
   height: 20px;
   width: 20px;
@@ -174,11 +174,11 @@ button {
   transform: rotateZ(45deg) translate(1px, 7px);
   bottom: 0;
   right: -7px;
-  transition: all 0.5s;
-  transition-delay: 0.5s;
+  transition: all .5s;
+  transition-delay: .5s;
 }
 
-.button .arrow:before {
+button .arrow:before {
   content: '';
   background-color: #99f3bd;
   width: 25px;
@@ -187,11 +187,11 @@ button {
   left: -5px;
   bottom: -25px;
   border-radius: 2px;
-  transition: all 0.5s;
+  transition: all .5s;
 }
 
-.button:after,
-.button:before {
+button:after,
+button:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -203,31 +203,31 @@ button {
   border-radius: 5px;
 }
 
-.button:after {
+button:after {
   animation-play-state: pause;
 }
 
-.button:active {
+button:active {
   width: 180px;
   height: 90px;
 }
 
-.button:focus:after {
-  animation: button-shadow 1s;
-}
+button:focus {
+  &:after {
+    animation: button-shadow 1s;
+  }
 
-.button:focus .arrow {
-  animation: button-arrow-rotate 0.5s forwards;
-  animation-delay: 0.5s;
-}
-
-.button:focus .arrow:after {
-  animation: button-arrow-up 0.5s forwards;
-  animation-delay: 0.5s;
-}
-
-.button:focus .arrow:before {
-  animation: button-arrow-down 0.5s forwards;
+  .arrow {
+    animation: button-arrow-rotate .5s forwards;
+    animation-delay: .5s;
+    &:after {
+      animation: button-arrow-up .5s forwards;
+      animation-delay: .5s;
+    }
+    &:before {
+      animation: button-arrow-down .5s forwards;
+    }
+  }
 }
 
 /* Customize scrollbar */
