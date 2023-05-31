@@ -23,7 +23,7 @@ body, html {
 .nav-items {
   display: flex;
   gap: 1rem;
-  margin-left: -2000px;
+  transform: translateX(-200px);
 }
 
 .navbar a, .navbar .logo {
@@ -71,7 +71,7 @@ body, html {
   width: 300px;
   height: 200px;
 }
-
+/*
 @media screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -102,12 +102,12 @@ body, html {
   .section-image {
     margin-top: 2rem;
   }
-}
+}*/
 
 .navbar .menu-icon {
   display: none;
 }
-
+/*
 @media screen and (max-width: 600px) {
   .navbar .menu-icon {
     display: block;
@@ -132,3 +132,4 @@ body, html {
     background-color: #333;
   }
 }
+*/
