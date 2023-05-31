@@ -23,7 +23,7 @@ body, html {
 .nav-items {
   display: flex;
   gap: 1rem;
-  transform: translateX(-20px);
+  transform: translateX(-40px);
 }
 
 .navbar a, .navbar .logo {
