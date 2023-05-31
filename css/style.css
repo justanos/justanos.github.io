@@ -314,3 +314,7 @@ button{
     }
   }
 }
+
+.dark-mode h1, .dark-mode p {
+  color: #f2f2f2;
+}
