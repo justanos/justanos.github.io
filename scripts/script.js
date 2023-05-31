@@ -1,30 +1,12 @@
-window.onload = function() {
-  var checkbox = document.getElementById('darkModeSwitch');
-  var navItems = document.getElementById('nav-items');
-  var navToggle = document.getElementById('nav-toggle');
+document.addEventListener("DOMContentLoaded", function() {
+  var downloadButton = document.getElementById("btn-auto-click");
+  var downloadLabel = document.getElementById("download-label");
 
-  // Dark Mode Toggle
-  var savedMode = localStorage.getItem('darkMode');
-  if (savedMode === 'true') {
-    document.body.classList.add('dark-mode');
-    checkbox.checked = true;
-  } else {
-    document.body.classList.remove('dark-mode');
-    checkbox.checked = false;
-  }
-
-  checkbox.addEventListener('change', function() {
-    if (this.checked) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'true');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'false');
-    }
+  downloadButton.addEventListener("click", function(event) {
+    event.stopPropagation();
   });
 
-  // Hamburger Menu Toggle
-  navToggle.addEventListener('click', function() {
-    navItems.classList.toggle('nav-active');
+  downloadLabel.addEventListener("click", function() {
+    downloadButton.checked = !downloadButton.checked;
   });
-};
+});
