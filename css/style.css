@@ -126,6 +126,7 @@ body, html {
     position: absolute;
     width: 100%;
     
+  margin-left: -2000px;
     top: 60px;
     left: 0;
     background-color: #333;
