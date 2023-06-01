@@ -257,7 +257,7 @@ button:focus {
 }
 
 .scroller {
-  height: 300px;
+  height: 800px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
