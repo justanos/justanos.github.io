@@ -1,5 +1,10 @@
 // script.js
-
+var firstsec = document.getElementById('home');
+var secondsec = document.getElementById('download');
+document.onscroll = function scroll() {
+  secondsec.scrollIntoView({behavior: "smooth"});
+ }
+/*
 document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.nav-items a');
@@ -57,3 +62,4 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', updateActiveSection);
   window.addEventListener('load', updateActiveSection);
 });
+*/
