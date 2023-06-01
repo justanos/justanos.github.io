@@ -22,6 +22,10 @@ html {
   z-index: 1;
 }
 
+.white-text {
+  color: white;
+}
+
 .nav-items {
   display: flex;
   gap: 1rem;
