@@ -245,3 +245,6 @@ button:focus {
 ::-webkit-scrollbar-thumb:hover {
   background-color: darkgrey;
 }
+.content {
+  color: black;
+}
