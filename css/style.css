@@ -8,13 +8,6 @@ body, html {
   scroll-behavior: smooth;
 }
 
-footer {
-  background-color: #d3d3d3;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -254,4 +247,68 @@ button:focus {
 }
 .content {
   color: black;
+}
+
+footer {
+  width: 100%;
+  background-color: #f0f0f0;
+  color: #7f7f7f;
+  padding: 20px 0;
+}
+
+.dark-mode footer {
+  background-color: #222;
+  color: #ddd;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #7f7f7f;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #1a73e8;
+}
+
+.footer-section a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+  }
 }
