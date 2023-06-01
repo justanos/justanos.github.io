@@ -1,10 +1,11 @@
 // script.js
+/*
 var firstsec = document.getElementById('home');
 var secondsec = document.getElementById('download');
 document.onscroll = function scroll() {
-  secondsec.scrollIntoView({behavior: "smooth"});
+  secondsec.scrollIntoView({behavior: ""});
  }
-/*
+
 document.addEventListener("DOMContentLoaded", function() {
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.nav-items a');
