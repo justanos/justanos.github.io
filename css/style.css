@@ -265,15 +265,15 @@ button:focus {
 
 footer {
   width: 100%;
-  background-color: #f0f0f0;
-  color: #7f7f7f;
+  background-color: #626e6c;
+  color: white;
   padding: 20px 0;
 }
 
-.dark-mode footer {
+/*.dark-mode footer {
   background-color: #222;
   color: #ddd;
-}
+}*/
 
 .footer-content {
   display: flex;
