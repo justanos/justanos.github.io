@@ -1,10 +1,19 @@
+/*
+███╗░░░███╗░█████╗░░██████╗
+████╗░████║██╔══██╗██╔════╝
+██╔████╔██║██║░░██║╚█████╗░
+██║╚██╔╝██║██║░░██║░╚═══██╗
+██║░╚═╝░██║╚█████╔╝██████╔╝
+╚═╝░░░░░╚═╝░╚════╝░╚═════╝░
+*/
 <!DOCTYPE html>
 <html>
-  <style>
-    body {
-        color: black;
-    }
+<style>
+  body {
+    color: black;
+  }
 </style>
+
 <head>
   <title>mOS - The Student-Crafted Ubuntu Distro</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -15,13 +24,14 @@
     }
   </style>
 </head>
+
 <body>
   <div class="navbar">
     <style>
-    .nav-items {
+      .nav-items {
         color: black;
-    }
-</style>
+      }
+    </style>
     <img src="assets/mos.svg" alt="mOS logo" id="logo" class="logo">
     <div class="nav-items" id="nav-items">
       <a href="#home"><img src="assets/home (1).png" alt="Home icon" class="nav-icon">Home</a>
@@ -30,66 +40,63 @@
     </div>
   </div>
   <article class="scroller">
-  <div class="section" id="home" style="background-image: url('assets/bg-1.jpg')">
-    <div class="content">
-      <h1>Welcome to mOS</h1>
-      <p>This is a custom Ubuntu distro crafted by students</p>
+    <div class="section" id="home" style="background-image: url('assets/bg-1.jpg')">
+      <div class="content">
+        <h1>Welcome to mOS</h1>
+        <p>This is a custom Ubuntu distro crafted by students</p>
+      </div>
+      <img src="home-image.png" alt="mOS screenshot" class="section-image">
     </div>
-    <img src="home-image.png" alt="mOS screenshot" class="section-image">
-  </div>
-  <div class="section" id="download" style="background-image: url('assets/bg-2.jpg')">
-    <div class="content">
-      <h1>Download mOS</h1>
-      <p>Join the community and start using mOS today</p>
-      <button class="btn-download" id="btn-auto-click" onclick="downloadFile()">
-        <div class="arrow"></div>
-     </button>
+    <div class="section" id="download" style="background-image: url('assets/bg-2.jpg')">
+      <div class="content">
+        <h1>Download mOS</h1>
+        <p>Join the community and start using mOS today</p>
+        <button class="btn-download" id="btn-auto-click" onclick="downloadFile()">
+          <div class="arrow"></div>
+        </button>
+      </div>
+      <img src="download-image.png" alt="mOS screenshot" class="section-image">
     </div>
-    <img src="download-image.png" alt="mOS screenshot" class="section-image">
-  </div>
-  <div class="section" id="about" style="background-image: url('assets/bg-3.jpg')">
-    <div class="content">
-      <h1>About Us</h1>
-      <p>We are two students passionate about open-source software</p>
+    <div class="section" id="about" style="background-image: url('assets/bg-3.jpg')">
+      <div class="content">
+        <h1>About Us</h1>
+        <p>We are two students passionate about open-source software</p>
+      </div>
+      <img src="about-image.png" alt="mOS screenshot" class="section-image">
     </div>
-    <img src="about-image.png" alt="mOS screenshot" class="section-image">
-  </div>
-</article>
-<script src="scripts/script.js"></script>
+  </article>
+  <script src="scripts/script.js"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3356327342512970"
-     crossorigin="anonymous"></script>
-     <footer>
-      <div class="footer-content">
-        <div class="footer-section links">
-          <h2>Our Sponsor</h2>
-          <ul>
-            <li><a href="https://steamcommunity.com/id/Spinotf2" target="_blank">
-            <img src="steam.svg" alt="Steam" /> Victor Buyck</a></li>
-          </ul>
-        </div>
-        <div class="footer-section social">
-          <h2>Follow Us</h2>
-          <a href="#"><img src="github.svg" alt="Github" /></a>
-          <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-          <a href="#"><img src="youtube.svg" alt="Youtube" /></a>
-        </div>
+    crossorigin="anonymous"></script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section links">
+        <h2>Our Sponsor</h2>
+        <ul>
+          <li><a href="https://steamcommunity.com/id/Spinotf2" target="_blank">
+              <img src="steam.svg" alt="Steam" /> Victor Buyck</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2023 mOS. All rights reserved.</p>
-        <p>Designed by Mauro Druwel & Mathis Velghe</p>
+      <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <a href="#"><img src="github.svg" alt="Github" /></a>
+        <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
+        <a href="#"><img src="youtube.svg" alt="Youtube" /></a>
       </div>
-    </footer>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3356327342512970"
-     crossorigin="anonymous"></script>
-<!-- Ad -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3356327342512970"
-     data-ad-slot="9608635705"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 mOS. All rights reserved.</p>
+      <p>Designed by Mauro Druwel & Mathis Velghe</p>
+    </div>
+  </footer>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3356327342512970"
+    crossorigin="anonymous"></script>
+  <!-- Ad -->
+  <h2>Ads</h2>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3356327342512970" data-ad-slot="9608635705"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </body>
 </html>
