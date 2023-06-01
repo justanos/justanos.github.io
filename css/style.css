@@ -9,6 +9,10 @@ body, html {
 }
 .image-hover-effect {
 }
+.image-hover-effect:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
 footer {
   background-color: #888888;
   color: #888;
