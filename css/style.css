@@ -338,11 +338,11 @@ footer {
 }
 
 .logo:hover {
-  -webkit-transform: rotate(1080deg); /* 3 rounds = 360deg * 3 */
-  -moz-transform: rotate(1080deg);
-  -ms-transform: rotate(1080deg);
-  -o-transform: rotate(1080deg);
-  transform: rotate(1080deg);
+  -webkit-transform: rotate(360deg); /* 3 rounds = 360deg * 3 */
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .logo:not(:hover) {
@@ -351,9 +351,9 @@ footer {
   -o-transition: -o-transform 3s ease-in-out;
   transition: transform 3s ease-in-out;
 
-  -webkit-transform: rotate(-720deg); /* 2 rounds backwards = -360deg * 2 */
-  -moz-transform: rotate(-720deg);
-  -ms-transform: rotate(-720deg);
-  -o-transform: rotate(-720deg);
-  transform: rotate(-720deg);
+  -webkit-transform: rotate(-180deg); /* 2 rounds backwards = -360deg * 2 */
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
