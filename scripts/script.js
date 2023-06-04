@@ -1,7 +1,7 @@
 // script.js
 function downloadFile() {
   var link = document.createElement("a");
-  link.href = "https://prizma8870-my.sharepoint.com/:u:/r/personal/druwel_mauro_1507_student_prizma_be/Documents/mOS/ubuntu-23.04-desktop-amd64.iso?download=1";
+  link.href = "https://prizma8870-my.sharepoint.com/:u:/g/personal/druwel_mauro_1507_student_prizma_be/EQDf_AAVdy5Lijad3-gZ_fMB_53tMpuO26tz8qPQmcNQsA?e=akwrKe&download=1";
   link.target = "_blank";
   link.click();
 }
