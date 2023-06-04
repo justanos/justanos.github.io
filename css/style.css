@@ -329,3 +329,31 @@ footer {
   }
 
 }
+
+.logo {
+  -webkit-transition: -webkit-transform 3s ease-in-out;
+  -moz-transition: -moz-transform 3s ease-in-out;
+  -o-transition: -o-transform 3s ease-in-out;
+  transition: transform 3s ease-in-out;
+}
+
+.logo:hover {
+  -webkit-transform: rotate(1080deg); /* 3 rounds = 360deg * 3 */
+  -moz-transform: rotate(1080deg);
+  -ms-transform: rotate(1080deg);
+  -o-transform: rotate(1080deg);
+  transform: rotate(1080deg);
+}
+
+.logo:not(:hover) {
+  -webkit-transition: -webkit-transform 3s ease-in-out;
+  -moz-transition: -moz-transform 3s ease-in-out;
+  -o-transition: -o-transform 3s ease-in-out;
+  transition: transform 3s ease-in-out;
+
+  -webkit-transform: rotate(-720deg); /* 2 rounds backwards = -360deg * 2 */
+  -moz-transform: rotate(-720deg);
+  -ms-transform: rotate(-720deg);
+  -o-transform: rotate(-720deg);
+  transform: rotate(-720deg);
+}
