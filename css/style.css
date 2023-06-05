@@ -359,29 +359,22 @@ footer {
 }
 
 .nav-icon {
-  -webkit-transition: -webkit-transform 3s ease-in-out;
-  -moz-transition: -moz-transform 3s ease-in-out;
-  -o-transition: -o-transform 3s ease-in-out;
-  transition: transform 3s ease-in-out;
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -moz-transition: -moz-transform 1s ease-in-out;
+  -o-transition: -o-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .nav-icon:hover {
-  -webkit-transform: rotate(45deg); /* 3 rounds = 360deg * 3 */
+  -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.nav-icon:not(:hover) {
-  /*-webkit-transition: -webkit-transform 3s ease-in-out;
-  -moz-transition: -moz-transform 3s ease-in-out;
-  -o-transition: -o-transform 3s ease-in-out;
-  transition: transform 3s ease-in-out;*/
-
-  -webkit-transform: rotate(-45deg); /* 2 rounds backwards = -360deg * 2 */
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
 }
