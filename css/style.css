@@ -366,11 +366,11 @@ footer {
 }
 
 .nav-icon:hover {
-  -webkit-transform: rotate(360deg); /* 3 rounds = 360deg * 3 */
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
+  -webkit-transform: rotate(45deg); /* 3 rounds = 360deg * 3 */
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .nav-icon:not(:hover) {
@@ -379,9 +379,9 @@ footer {
   -o-transition: -o-transform 3s ease-in-out;
   transition: transform 3s ease-in-out;
 
-  -webkit-transform: rotate(-360deg); /* 2 rounds backwards = -360deg * 2 */
-  -moz-transform: rotate(-360deg);
-  -ms-transform: rotate(-360deg);
-  -o-transform: rotate(-360deg);
-  transform: rotate(-360deg);
+  -webkit-transform: rotate(-45deg); /* 2 rounds backwards = -360deg * 2 */
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
