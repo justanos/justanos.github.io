@@ -378,3 +378,18 @@ footer {
   -o-transform: rotate(-35deg);
   transform: rotate(-35deg);
 }
+#adblock-message {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#adblock-message h1 {
+  color: #333;
+  font-size: 24px;
+}
+
