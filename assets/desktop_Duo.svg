@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#00517D;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#00AEEF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<path class="st0" d="M225.16,178.32c-0.05,2.73-2.27,4.91-5,4.91H79.85c-2.73,0-4.95-2.18-5-4.91V94.84c0.05-2.73,2.27-4.91,5-4.91
+	h140.3c2.73,0,4.95,2.18,5,4.91L225.16,178.32z"/>
+<line class="st0" x1="150" y1="184.61" x2="150" y2="209.66"/>
+<line class="st0" x1="118.9" y1="210.07" x2="181.1" y2="210.07"/>
+<line class="st0" x1="133.02" y1="136.04" x2="152.11" y2="116.23"/>
+<polyline class="st0" points="168.21,129.2 180.4,117.01 188.92,125.53 203.41,111.04 "/>
+<polyline class="st0" points="196.19,111.04 203.41,111.04 203.41,118.28 "/>
+<polyline class="st0" points="168.21,109.73 168.21,134.19 203.41,134.19 "/>
+<rect x="164.21" y="155.41" class="st0" width="8.58" height="8.58"/>
+<rect x="181.52" y="144.34" class="st0" width="8.58" height="19.64"/>
+<rect x="198.83" y="150.83" class="st0" width="8.58" height="13.16"/>
+<circle class="st1" cx="113.86" cy="118.02" r="14.38"/>
+<path class="st1" d="M113.88,136.5L113.88,136.5c-10.09,0.03-18.26,8.2-18.28,18.29v10.73h36.53v-10.73
+	C132.1,144.72,123.95,136.55,113.88,136.5z"/>
+</svg>
