@@ -383,6 +383,7 @@ footer {
   background-color: #284b86;
   border: none;
   color: white;
+  width:fit-content;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
